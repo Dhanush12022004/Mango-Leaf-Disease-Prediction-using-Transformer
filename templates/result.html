@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { margin-top: 50px; }
+        img { max-width: 300px; margin: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p><strong>Disease Detected:</strong> {{ prediction }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Leaf">
+        <br>
+        <a href="/">Try Another Image</a>
+    </div>
+</body>
+</html>
